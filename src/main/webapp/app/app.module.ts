@@ -26,8 +26,6 @@ import { FooterComponent } from './layouts/footer/footer.component';
 import { PageRibbonComponent } from './layouts/profiles/page-ribbon.component';
 import { ErrorComponent } from './layouts/error/error.component';
 
-import {MatToolbarModule} from '@angular/material/toolbar';
-import { SignupComponent } from './signup/signup.component';
 
 @NgModule({
   imports: [
@@ -41,7 +39,6 @@ import { SignupComponent } from './signup/signup.component';
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: false }),
     HttpClientModule,
     NgxWebstorageModule.forRoot({ prefix: 'jhi', separator: '-', caseSensitive: true }),
-    MatToolbarModule,
   ],
   providers: [
     Title,
@@ -49,7 +46,7 @@ import { SignupComponent } from './signup/signup.component';
     { provide: NgbDateAdapter, useClass: NgbDateDayjsAdapter },
     httpInterceptorProviders,
   ],
-  declarations: [MainComponent, NavbarComponent, ErrorComponent, PageRibbonComponent, FooterComponent, SignupComponent],
+  declarations: [MainComponent, NavbarComponent, ErrorComponent, PageRibbonComponent, FooterComponent],
   bootstrap: [MainComponent],
 })
 export class AppModule {
